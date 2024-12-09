@@ -58,25 +58,40 @@
       
       <form id="addStudentForm" class="space-y-4" action = "insertdb.php" method ="POST">
         <div>
-          <label for="firstName" class="block text-sm font-medium text-gray-700">Package Name</label>
-          <input type="text" id="firstName" name="firstName" class="block w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-blue-200">
+          <label for="packageName" class="block text-sm font-medium text-gray-700">Package Name</label>
+          <input type="text" id="packageName" name="packageName" class="block w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-blue-200">
         </div>
         <div>
-          <label for="lastName" class="block text-sm font-medium text-gray-700">Author Name</label>
-          <input type="text" id="lastName" name="lastName" class="block w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-blue-200">
+          <label for="AuthorName" class="block text-sm font-medium text-gray-700">Author Name</label>
+           <select name="AuthorName" class="w-full text-black" id="AuthorName">
+            <?php 
+
+             $query = "select * from `Authors`";
+             $result = mysqli_query(mysql: $connection, query : $query);
+             if(!$result){
+              die("query failed".mysqli_error());
+            }else{
+              while($row = mysqli_fetch_assoc(result: $result)){
+              ?>
+              <option value="<?php echo $row['author_name']; ?>" class="w-full text-black"><?php echo $row['author_name'];?></option>
+              <?php
+              }
+            }
+            ?>
+           </select>
         </div>
         <div>
-          <label for="age" class="block text-sm font-medium text-gray-700">Version</label>
-          <input type="text" id="age" name="age" class="block w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-blue-200">
+          <label for="version" class="block text-sm font-medium text-gray-700">Version</label>
+          <input type="text" id="version" name="version" class="block w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-blue-200">
         </div>
         <div>
           <label for="descritpion" class="block text-sm font-medium text-gray-700">Description</label>
-          <textarea name="description" class="block w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-blue-200" id="description"></textarea>
+          <textarea id='descritpion' name="description" class="block w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-blue-200" id="description"></textarea>
         </div>
 
         <div class="flex justify-end space-x-2">
           <button type="button" id="closeModalFooter" class="bg-gray-300 px-4 py-2 rounded hover:bg-gray-400">Close</button>
-          <input type="submit" name="addStudent" class="bg-[#FF823E] text-white px-4 py-2 rounded hover:bg-[#FD904B]"></input>
+          <input type="submit" name="addPackage" class="bg-[#FF823E] text-white px-4 py-2 rounded hover:bg-[#FD904B]"></input>
         </div>
       </form>
     </div>

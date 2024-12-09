@@ -8,7 +8,7 @@
   <title>Gestion JavaScript Packages</title>
 </head>
 <body class="bg-[#1B1B1F]">
-
+    
   <nav class="relative text-white p-4">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <a href="#" class="w-36"><img src="assets/logo.png" alt=""></a>
