@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="assets/logo.png">
   <title>Gestion JavaScript Packages</title>
 </head>
 <body class="bg-[#1B1B1F]">
