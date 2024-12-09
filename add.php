@@ -1,42 +1,21 @@
-
 <?php 
 
 include('database.php');
 
+if (isset($_POST["addPackage"])) {
+    $packageName = $_POST['packageName'];
+    $AuthorName = $_POST['AuthorName'];
+    $version = $_POST['version'];
+    $description = $_POST['description'];
 
-if (isset($_POST["addPackage"])){
 
-$packageName = $_POST['packageName'];
-$lname = $_POST['lastName'];
-$age = $_POST['age'];
-
-
-if ($fname == ''|| $lname == ''){
-    header('location:index.php?message=You nedd to fill in the first name ');
-}else{
-
-    $query = "insert into `students` (`name`, `last_name`, `age`) values ('$packageName','$lname','$age')" ;
-    $result = mysqli_query( $connection, $query);
-    if (!$result){
-        die("Query faild".mysqli_error());
-    }
-  }
+        $query = "INSERT INTO `packages` (`name`, `version`, `author_name`, `description`)  VALUES ('$packageName', '$version', '$AuthorName', '$description')";
+        $result = mysqli_query(mysql: $connection, query: $query);
+        if (!$result) {
+            die("Query failed: " . mysqli_error(mysql: $connection));
+        } else {
+            header(header: 'location:index.php');
+        }
+        
 }
-
-if (isset($_POST["deleteSrudent"])){
-
-    $fname = $_POST['firstName'];
-
-    $query = "delete from `students where first_name = $fname`";
-    $result = mysqli_query( $connection, $query);
-    if (!$result){
-        die("Query faild".mysqli_error());
-    }
-
-}
-
-
-
-include("index.php");
-
 ?>

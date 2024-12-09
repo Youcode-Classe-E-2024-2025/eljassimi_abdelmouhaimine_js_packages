@@ -1,5 +1,6 @@
 <?php include('database.php'); ?>
 <?php include('header.php'); ?>
+
   <main class="max-w-4xl mx-auto mt-8 p-4 bg-white shadow rounded">
     <div class="flex justify-between items-center mb-4">
       <h2 class="text-xl font-semibold">ALL PACKAGES</h2>
@@ -56,7 +57,7 @@
         <button id="closeModal" class="text-gray-500 hover:text-gray-700">&times;</button>
       </div>
       
-      <form id="addStudentForm" class="space-y-4" action = "insertdb.php" method ="POST">
+      <form id="addPackageForm" class="space-y-4" action = "add.php" method ="POST">
         <div>
           <label for="packageName" class="block text-sm font-medium text-gray-700">Package Name</label>
           <input type="text" id="packageName" name="packageName" class="block w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-blue-200">
@@ -86,7 +87,7 @@
         </div>
         <div>
           <label for="descritpion" class="block text-sm font-medium text-gray-700">Description</label>
-          <textarea id='descritpion' name="description" class="block w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-blue-200" id="description"></textarea>
+          <textarea id='description' name="description" class="block w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-blue-200" id="description"></textarea>
         </div>
 
         <div class="flex justify-end space-x-2">
