@@ -65,6 +65,38 @@
       </table>
     </div>
   </main>
+
+  <div id="modal" class="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center hidden">
+    <div class="bg-white w-96 rounded-lg shadow-lg p-6">
+
+      <div class="flex justify-between items-center mb-4">
+        <h2 class="text-xl font-semibold">Add Package</h2>
+        <button id="closeModal" class="text-gray-500 hover:text-gray-700">&times;</button>
+      </div>
+      
+      <form id="addStudentForm" class="space-y-4" action = "insertdb.php" method ="POST">
+        <div>
+          <label for="firstName" class="block text-sm font-medium text-gray-700">Package Name</label>
+          <input type="text" id="firstName" name="firstName" class="block w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-blue-200">
+        </div>
+        <div>
+          <label for="lastName" class="block text-sm font-medium text-gray-700">Author Name</label>
+          <input type="text" id="lastName" name="lastName" class="block w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-blue-200">
+        </div>
+        <div>
+          <label for="age" class="block text-sm font-medium text-gray-700">Version</label>
+          <input type="text" id="age" name="age" class="block w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-blue-200">
+        </div>
+
+        <div class="flex justify-end space-x-2">
+          <button type="button" id="closeModalFooter" class="bg-gray-300 px-4 py-2 rounded hover:bg-gray-400">Close</button>
+          <input type="submit" name="addStudent" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"></input>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  
 <script src="main.js"></script>t
 </body>
 </html>
