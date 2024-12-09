@@ -14,9 +14,9 @@
             <a href="#" class="w-36"><img src="assets/logo.png" alt=""></a>
 
             <div class="hidden md:flex space-x-6">
-                <a href="#" class="hover:text-[#FF823E]">Home</a>
-                <a href="#packages" class="hover:text-[#FF823E]">Packages</a>
-                <a href="#authors" class="hover:text-[#FF823E]">Authors</a>
+                <a href="home.php" class="hover:text-[#FF823E]">Home</a>
+                <a href="index.php" class="hover:text-[#FF823E]">Packages</a>
+                <a href="author.php" class="hover:text-[#FF823E]">Authors</a>
                 <a href="#contact" class="hover:text-[#FF823E]">Contact</a>
             </div>
 
@@ -31,9 +31,9 @@
     </nav>
     <div id="mobile-menu" class="md:hidden absolute z-10 w-full hidden bg-[#FF823E] text-white p-4">
         <div class="flex flex-col space-y-4">
-            <a href="#" class="hover:text-[#FF823E]">Home</a>
-            <a href="#packages" class="hover:text-[#FF823E]">Packages</a>
-            <a href="#authors" class="hover:text-[#FF823E]">Authors</a>
+            <a href="home.php" class="hover:text-[#FF823E]">Home</a>
+            <a href="index.php" class="hover:text-[#FF823E]">Packages</a>
+            <a href="author.php" class="hover:text-[#FF823E]">Authors</a>
             <a href="#contact" class="hover:text-[#FF823E]">Contact</a>
         </div>
     </div>

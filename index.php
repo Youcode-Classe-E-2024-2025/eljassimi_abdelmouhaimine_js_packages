@@ -37,8 +37,8 @@
                 <td class="border border-gray-300 px-4 py-2"><?php echo $row['name']; ?></td>
                 <td class="border border-gray-300 px-4 py-2"><?php echo $row['author_name'];?></td>
                 <td class="border border-gray-300 px-4 py-2"><?php echo $row['version']; ?></td>
-                <td class="border border-gray-300 px-4 py-2"><a href="update.php>"><button class="bg-green-500 text-white px-3 py-1 rounded hover:bg-green-600">Update</button></a></td>
-                <td class="border border-gray-300 px-4 py-2"><a href="delete.php>"><button name="deleteSrudent" class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600">Delete</button></a></td>
+                <td class="border border-gray-300 px-4 py-2"><a href="update.php?id=<?php echo $row['package_id'];?>"><button class="bg-green-500 text-white px-3 py-1 rounded hover:bg-green-600">Update</button></a></td>
+                <td class="border border-gray-300 px-4 py-2"><a href="delete.php?id=<?php echo $row['package_id'];?>"><button name="deleteSrudent" class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600">Delete</button></a></td>
                 </tr>
                 <?php
                 }
