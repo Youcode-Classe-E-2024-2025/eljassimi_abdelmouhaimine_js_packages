@@ -5,7 +5,7 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
     
              <?php
-                  $query = "select * from `packages`";
+                  $query = "SELECT Packages.package_id, Packages.name,Packages.description, Packages.version,Authors.author_name FROM Packages JOIN  Authors ON  Packages.author_id = Authors.author_id;";
                   $result = mysqli_query(mysql: $connection, query : $query);
                   if(!$result){
                     die("query failed".mysqli_error());
@@ -20,7 +20,7 @@
             </div>
             <?php 
             }
-            }
+           }
             ?>
       </div>
     </div>

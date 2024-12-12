@@ -7,7 +7,7 @@ if (isset($_POST["addAuthor"])) {
      $authorEmail = $_POST['authorEmail'];
 
 
-        $query = "INSERT INTO `authors` (`author_name`, `email`)  VALUES ('$authorName', '$authorEmail')";
+        $query = "INSERT INTO `authors` )  VALUES ('$authorName', '$authorEmail')";
         $result = mysqli_query(mysql: $connection, query: $query);
         if (!$result) {
             die("Query failed: " . mysqli_error(mysql: $connection));
