@@ -1,5 +1,5 @@
 <?php include('database.php');
-$check;
+session_start();
 if (isset($_POST["signin"])) {
    $username = $_POST["username"];
    $password = $_POST["password"];
@@ -13,6 +13,7 @@ if (isset($_POST["signin"])) {
               }else{
                 $row = mysqli_fetch_assoc(result: $result);
                 if($row["username"]==$username && $row["password"]==$password){
+                    $_SESSION['loggedin'] = true;
                     header('location:index.php');
                     exit();
               }else{
