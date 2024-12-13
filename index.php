@@ -1,6 +1,7 @@
 <?php include('database.php'); ?>
 <?php include('header.php'); ?>
 
+
 <?php  ?>
 
   <main class="max-w-4xl mx-auto mt-8 p-4 bg-white shadow rounded">
@@ -94,7 +95,7 @@
         <div class="flex justify-end space-x-2">
           <button type="button" id="closeModalFooter" class="bg-gray-300 px-4 py-2 rounded hover:bg-gray-400">Close</button>
           <button id="submit" type="submit" name="addPackage" class = "bg-[#FF823E] text-white px-4 py-2 rounded hover:bg-[#FD904B]">Submit</button>
-          <button id="edit" type="submit" name="Editpackage"  class = "bg-[#FF823E] text-white px-4 py-2 rounded hover:bg-[#FD904B] hidden">Update</button>
+          <button id="edit" type="submit" name="Editpackage"  class = "bg-[#FF823E] text-white px-4 py-2 rounded hover:bg-[#FD904B] hidden">Update<</button>
         </div>
       </form>
     </div>
